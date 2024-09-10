@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../static/bars.js" defer></script>
+    <script src="../static/search.js" defer></script>
+    <script src="../static/popup.js" defer></script>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+<body>
+
+    <header>
+        <div class="text">
+            <p>World</p><p>Blog</p>
+        </div>
+
+        <div class="items1">
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('login')}}">Sign-in</a>
+            <a href="{{url_for('cad')}}">Sign-up</a>
+        </div>
+
+        <div class="items2">
+            <input placeholder="Search" type="text" name="search" id="search"><img src="../static/search.svg" alt="" srcset=""></input>
+        </div>
+        <img id="header_logo" style="width: 1.2rem; height: 1.2rem;" src="../static/user.png" alt="" srcset="">
+    </header>
+
+    
+
+    <div id="menu">
+        <div id="items" >
+            <div class="userProfile" style="display: flex; margin-bottom: 1rem; align-items: center;">
+               
+                 <div class="info" style="margin-left: 2rem;">
+                    <p style="font-weight: 800;">{{infouser.name}}</p>
+                    <p style="color: #535566">{{infouser.email}}</p>
+             
+                 </div>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.9rem; height: 0.9rem; " src="../static/user-solid.svg" alt=""><a style="color: white;;" href="{{url_for('profile')}}">Profile</a>
+            </div>
+
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.8rem; " src="../static/pen-solid.svg" alt=""><a style="color: white;" href="{{url_for('adp')}}">Write</a>
+            </div>
+
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.8rem; " src="../static/right-from-bracket-solid.svg" alt=""><a style="color: white;;" href="{{url_for('logout')}}">Logout</a>
+            </div>
+
+            <div class="itemMenu" style="display:flex">
+             <a style="color: white;;" href="{{url_for('home')}}">Home</a>
+            </div>
+
+            <div class="itemMenu" style="display:flex">
+                <a href="">Contact</a>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <a href="{{url_for('login')}}">Sign-in</a>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <a href="{{url_for('cad')}}">Sign-up</a>
+            </div>
+
+        </div>
+
+    </div>
+    <h3 style="text-align: center; font-family: 'Lato', sans-serif; font-weight: 400; color: white;">Home</h3>
+     <div class="root rootHome" >
+        {%for pr in prod%}
+          <div class="divBlog" style="width: 60%; ">
+            <img style="width: 100%;" src="{{ url_for('uploaded_file', filename=pr.path) }}" alt="" srcset="">
+            <div class="infoB" >
+                <p style="color:#4B6BFB; background-color: #242535; width: 5em; text-align: center; padding: 0.2rem; border-radius: 2px;">{{pr.categoria}}</p>
+                <h4><a href="{{url_for('produto_detail', product_id=pr.id)}}">{{pr.name}}</a></h4>
+                <p style="display: inline; font-family: 'Lato'; color: rgb(153, 153, 153); font-size: 0.9rem; font-weight: 700;">{{pr.author}}</p> <p style="font-family: 'Lato'; color: rgb(153, 153, 153); font-size: 0.8rem;">{{pr.datee}}</p>
+            </div>
+          </div>
+        {%endfor%}
+     </div>
+     
+
+
+</body>
+</html>

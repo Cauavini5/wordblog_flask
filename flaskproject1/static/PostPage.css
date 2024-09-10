@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+
+.root {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 1em;
+    justify-items: center;
+}
+
+.root > div > h1,h2,h3,h4,h5,h6 {
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.root > div > p {
+    color: rgb(136, 136, 136);
+    font-family: 'Playfair Display', serif"
+
+}
+
+.root > div > a::after {
+    color: rgb(40, 28, 85);
+
+}
+
+.root > div > img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.root > div > h4 {
+    width: 100%;
+}
+
+.root > div {
+    
+    width: 80%;
+}
+
+
+.root > div > * {
+    margin-top: 10px;
+}
+
+.root > #description {
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 820px) {
+    .root > div {
+    
+        width: 95%;
+    }
+}

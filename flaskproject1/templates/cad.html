@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LejsygqAAAAAIJ1W54gmAILYuqajsBqKXDM7TL2"></script>
+    <link rel="stylesheet" href="../static/cad.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfjWiQqAAAAAEivcb-cc2K0F3qut5zMz9ZESkIp"></script>
+</head>
+<body>
+
+    <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LfjWiQqAAAAAEivcb-cc2K0F3qut5zMz9ZESkIp', {action: 'LOGIN'});
+          });
+        }
+      </script>
+
+    <form action="{{url_for('add_cad')}}" method="post">
+        <div class="text">
+          <p>World</p><p>Blog</p>
+        </div>
+        <h4>Sign-up</h4>
+        <input type="text" placeholder="Name" name="user" id="user">
+        <input type="email" maxlength="19" placeholder="Email" name="email" id="user">
+        <input type="password" placeholder="Password" name="pass" id="pass">
+        <div>
+            <input type="radio" name="accept" value="true" id="accept"> 
+            <label style="text-decoration: none; color: white;">Eu aceito os <a href="" style="text-decoration: none; color: white;">termos</a></label>
+            <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
+            {{ recaptcha }}
+            
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div style="display: flex; align-items:center;box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border: 1px solid  rgb(204, 200, 200);  " class=flashes>
+            {% for message in messages %}
+            <p style="color: rgb(190, 0, 0);">{{ message }}</p>
+            
+            {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+        {% block body %}{% endblock %}
+        <button type="submit" id="submit">CADASTRAR</button>
+    </form>
+    
+</body>
+</html>

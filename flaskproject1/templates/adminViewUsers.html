@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <script src="../static/msgbox.js" defer></script>
+</head>
+<body>
+
+    {%for i in users%} 
+  
+    <h2 class="user_name" style="color:rgb(59, 59, 59); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:large;">{{i}}</h2> 
+    <form action="{{url_for('msg')}}" method="POST" class="msgbox" id="msgbox" style="display: none; box-shadow: 0px 0px 10px 1px #24242475; padding: 1em; display: grid; grid-template-columns: 50%; grid-template-rows: 2em 2em; gap: 10px; ">
+        <input type="text" name="msg" id="">
+        <input style="display: none;" value="{{i}}" name="name_user" type="text">
+        <label style="display: inline;" for="">remove?</label> <input type="radio" value="yes" name="del" id="">
+        <button type="submit">ENVIAR</button>
+    </form>
+    {%endfor%} 
+    
+</body>
+</html>

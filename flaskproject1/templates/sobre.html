@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/sobre.css">
+    <script src="../static/bars.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h2 style="color: rgb(27, 123, 233);font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">WS</h2>
+        <div>
+            <a href="{{url_for('home')}}" class="a_header">Home</a>
+            <a href="{{url_for('login')}}" class="a_header">Login</a>
+            <a href="{{url_for('cad')}}"  class="a_header">Cadastro</a>
+            <a href="#"   class="a_header">Sobre</a>
+            <a href="#"   class="a_header">Config</a>
+        </div>
+        <img id="header_logo" src="../static/bars-solid.svg" alt="" srcset="" style="width: 0.9em">
+    </header>
+
+    <div class="none bars" style=" background-color: white; width: 100%;display: grid; grid-template-columns: 100%; justify-content: center;">  
+        <a href="{{url_for('home')}}" style="    font-family: 'Jockey One';
+    font-weight: 100; width: 100%;padding:0.8em; text-align:center;  width: 100%;  border-bottom: 1px solid rgb(204, 200, 200); text-decoration: none;" class="none item" >Home</a>
+        <a href="{{url_for('login')}}" style="    font-family: 'Jockey One';
+    font-weight: 100; width: 100%;padding:0.8em; text-align:center;  width: 100%;  border-bottom: 1px solid rgb(204, 200, 200); text-decoration: none;" class="none item" >Login</a>
+        <a href="{{url_for('cad')}}" style="    font-family: 'Jockey One';
+    font-weight: 100;width: 100%;padding:0.8em;text-align:center; width: 100%; text-decoration: none; border-bottom: 1px solid rgb(204, 200, 200);"  class="none item" >Cadastro</a>
+        <a href="#" style="    font-family: 'Jockey One';
+    font-weight: 100;width: 100%;padding:0.8em;text-align:center; width: 100%;  border-bottom: 1px solid rgb(204, 200, 200);text-decoration: none;"  class="none item">Sobre</a>
+        <a href="{{url_for('config')}}" style="    font-family: 'Jockey One';
+    font-weight: 100;width: 100%;padding:0.8em;text-align:center; width: 100%;  border-bottom: 1px solid rgb(204, 200, 200); text-decoration: none;"  class="none item">Config</a>
+    </div>
+
+    <div class="root">
+        <div class="div1">
+            <h1>Sobre Nós</h1>
+            <p>Bem-vindo à WS, seu destino número um para uma ampla variedade de produtos de qualidade a preços acessíveis. Nosso objetivo é oferecer uma experiência de compra excepcional, conectando você diretamente com os melhores fornecedores.</p>
+        </div>
+
+        <div class="div2">
+            <h1>Nossa Missão</h1>
+            <p>Na WS, nossa missão é proporcionar aos nossos clientes uma vasta seleção de produtos de alta qualidade a preços justos. Acreditamos que todos merecem acesso a itens incríveis, e trabalhamos incansavelmente para garantir que isso seja possível.</p>
+        </div>
+
+        <div class="div3">
+            <h1>Como funciona? </h1>
+            <p>Em nossa loja, todos os produtos são enviados diretamente dos nossos fornecedores parceiros. Isso significa que você tem acesso a uma grande variedade de produtos de diferentes partes do mundo, com preços competitivos e qualidade garantida.</p>
+        </div>
+
+        <div class="div4">
+            <h1>Benefícios para Você</h1>
+            <p>Preços Acessíveis: Ao comprar diretamente dos fornecedores, conseguimos oferecer preços mais competitivos.
+                Variedade Ampla: Com acesso direto a diversos fornecedores, podemos oferecer uma gama maior de produtos.
+                Itens Exclusivos: Descubra produtos únicos que você não encontrará em lojas tradicionais.</p>
+
+            <p>Variedade Ampla: Com acesso direto a diversos fornecedores, podemos oferecer uma gama maior de produtos.</p>
+            <p>Itens Exclusivos: Descubra produtos únicos que você não encontrará em lojas tradicionais.</p>
+        </div>
+
+        <div class="div5">
+            <h1>IMPORTANTE</h1>
+            <h2>Entrega e prazos</h2>
+            <p>Entendemos que receber seus produtos rapidamente é importante para você. Embora os itens sejam enviados diretamente dos nossos fornecedores, fazemos todo o possível para garantir um processo de envio rápido e eficiente. Os prazos de entrega podem variar entre 10-20 dias úteis, dependendo do produto e da localização do fornecedor. Você será sempre mantido informado sobre o status do seu pedido.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

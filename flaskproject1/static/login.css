@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #181A2A;
+}
+
+form {
+ 
+    padding: 1em;
+    width: 80%;
+    height: 52vh;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:2em 3em 3em 3em 3em 3em;
+    gap:1em;
+    padding: 0.5em;
+    align-content: center;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form > .text {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+form > .text > p:nth-child(2) {
+    font-weight: 800;
+}
+
+#submit {
+    background-color: aqua;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    color:rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px 1px #24242475;
+}
+#accept {
+    position: relative;
+    top: 2px;
+    display: inline;
+}
+
+label {
+    display: inline;
+    font-size: 0.9rem;
+    color:#424444
+}
+form > h4 {
+    
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#user, #pass {
+    color: white;
+    background-color: #25283d;
+    border: none;
+    text-indent: 1em;
+    border-radius: 2px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../static/bars.js" defer></script>
+    <script src="../static/search.js" defer></script>
+    <script src="../static/popup.js" defer></script>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="text">
+            <p>World</p><p>Blog</p>
+        </div>
+
+        <div class="items1">
+            <a href="">Home</a>
+            <a href="">Blog</a>
+            <a href="">Pages</a>
+            <a href="">Contact</a>
+            <a href="{{url_for('login')}}">Sign-in</a>
+            <a href="{{url_for('cad')}}">Sign-up</a>
+        </div>
+
+        <div class="items2">
+            <input placeholder="Search" type="text" name="search" id="search"><img src="../static/search.svg" alt="" srcset=""></input>
+        </div>
+        <img id="header_logo" style="width: 1.2rem; height: 1.2rem;" src="../static/user.png" alt="" srcset="">
+    </header>
+
+    <h4 style="font-family: 'Lato', sans-serif; text-align: center; color: rgb(255, 255, 255); margin-top: 2em;">HOME</h4>
+
+    <div id="menu">
+        <div id="items" >
+            <div class="userProfile" style="display: flex; margin-bottom: 1rem; align-items: center;">
+                <img src="../static/user.png" alt="" style="padding: 1em; border-radius: 100%; border: 1px solid white">
+                 <div class="info" style="margin-left: 2rem;">
+                    <p style="font-weight: 800;">Vinicius Alves</p>
+                    <p style="color: #535566">rewardcaua@gmail.com</p>
+                    
+                 </div>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.9rem; height: 0.9rem; " src="../static/user-solid.svg" alt=""><a style="color: white;;" href="">Profile</a>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.8rem; " src="../static/pen-solid.svg" alt=""><a style="color: white;" href="">Write</a>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.8rem; " src="../static/gear-solid.svg" alt=""><a style="color: white;;" href="">Config</a>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.8rem; " src="../static/right-from-bracket-solid.svg" alt=""><a style="color: white;;" href="">Logout</a>
+            </div>
+            
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="about">
+            <h4>About</h4>
+            <p>
+                WorldBlog é o seu portal para insights globais e inspiração. Nós nos dedicamos a trazer a você as histórias, notícias e opiniões mais relevantes de todos os cantos do mundo. Participe da nossa comunidade e explore um mundo de possibilidades.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

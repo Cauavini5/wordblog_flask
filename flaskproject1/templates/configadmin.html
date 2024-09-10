@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/config.css">
+    <script src="../static/bars.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h2 style="color: rgb(27, 123, 233);font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">WS</h2>
+        <div>
+            <a href="{{url_for('home')}}" class="a_header">Home</a>
+            <a href="{{url_for('login')}}" class="a_header">Login</a>
+            <a href="{{url_for('cad')}}"  class="a_header">Cadastro</a>
+            <a href="#"   class="a_header">Sobre</a>
+            <a href="#"   class="a_header">Config</a>
+        </div>
+        <img id="header_logo" src="../static/bars-solid.svg" alt="" srcset="" style="width: 0.9em">
+    </header>
+
+    <div class="none bars" style=" background-color: white; width: 100%;display: grid; grid-template-columns: 100%; justify-content: center;">  
+        <a href="{{url_for('home')}}" style="    font-family: 'Jockey One';
+    font-weight: 100; width: 100%;padding:0.8em; text-align:center;  width: 100%;  border-bottom: 1px solid rgb(204, 200, 200); text-decoration: none;" class="none item" >Home</a>
+        <a href="{{url_for('login')}}" style="    font-family: 'Jockey One';
+    font-weight: 100; width: 100%;padding:0.8em; text-align:center;  width: 100%;  border-bottom: 1px solid rgb(204, 200, 200); text-decoration: none;" class="none item" >Login</a>
+        <a href="{{url_for('cad')}}" style="    font-family: 'Jockey One';
+    font-weight: 100;width: 100%;padding:0.8em;text-align:center; width: 100%; text-decoration: none; border-bottom: 1px solid rgb(204, 200, 200);"  class="none item" >Cadastro</a>
+        <a href="#" style="    font-family: 'Jockey One';
+    font-weight: 100;width: 100%;padding:0.8em;text-align:center; width: 100%;  border-bottom: 1px solid rgb(204, 200, 200);text-decoration: none;"  class="none item">Sobre</a>
+        <a href="{{url_for('config')}}" style="    font-family: 'Jockey One';
+    font-weight: 100;width: 100%;padding:0.8em;text-align:center; width: 100%;  border-bottom: 1px solid rgb(204, 200, 200); text-decoration: none;"  class="none item">Config</a>
+    </div>
+
+    <div class="root">
+        <h5>Configurações</h5>
+        <div class="itens" style="display: grid; grid-template-columns: 100%; align-items: center;">
+            <a style="box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border: 1px solid  rgb(204, 200, 200); margin-top: 10px;">Endereço</a>
+            <a style="box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border: 1px solid  rgb(204, 200, 200); margin-top: 10px;">Notificações</a>
+            <a href="{{url_for('adview')}}" style="text-decoration:none;box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border: 1px solid  rgb(204, 200, 200); margin-top: 10px;">Users</a>
+            <a href="{{url_for('adp')}}" style="text-decoration:none;box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border: 1px solid  rgb(204, 200, 200); margin-top: 10px;">Produtos</a>
+            <a style="text-decoration:none; box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border: 1px solid  rgb(204, 200, 200); margin-top: 10px;" href="{{url_for('logout')}}">Logout</a>
+        </div>
+    </div>
+    
+</body>
+</html>

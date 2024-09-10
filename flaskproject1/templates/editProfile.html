@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+<body>
+
+ <dic class="root" style="font-family: 'Lato', sans-serif;">
+    <form class="form" enctype="multipart/form-data" method="post" action="{{url_for('updateprofile')}}" style="display: grid; grid-template-rows: auto; grid-template-columns: 100%; grid-gap:0.5em;">
+        <label style="margin-top: 0.5em; color: white; font-weight: 300;" for="">Nome</label>
+        <input style=" padding: 1em" name="name"  type="text">
+        <label style="margin-top: 0.5em; color: white; font-weight: 300;" for="">Bio</label>
+        <textarea style=" padding: 1em;" name="bio" placeholder="Seu texto" name="description"  type="text" id="userInput"></textarea>
+        <button style="color: white; font-weight:600;margin-top: 0.5em; box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border-radius: 3px; padding: 1.5em; border:none; background-color: #319DBF;" type="submit">OK</button>
+    </form>
+ </dic>
+    
+</body>
+</html>

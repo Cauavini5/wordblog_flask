@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body style="background-color: #181A2A;">
+
+    <div 
+    class="root" style="background-color: #25283d; 
+    height: 90vh; 
+    text-align: center; 
+    margin: 1em; 
+    padding: 0.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <div class="info" style="
+        height: max-content;
+        display: grid; grid-template-columns: 100%;
+        grid-template-rows: 2em 40% 3em 3em;
+        grid-gap: 2em;
+        ">
+            <h1 style="color: white; font-family: 'Lato',sans-serif;">WorldBlog</h1>
+            <p style="color: white; font-family: 'Lato',sans-serif;">
+                Descubra a experiência de compras online reinventada. Na WS, oferecemos uma seleção exclusiva de produtos de alta qualidade a preços imbatíveis. Navegue pela nossa coleção e encontre tudo o que você precisa para o seu dia a dia e ocasiões especiais. Experimente a diferença WS hoje mesmo!
+            </p>
+            <a href="{{url_for('login')}}" style="text-decoration: none; background: rgb(27, 226, 226); padding-top: 1rem; color:black; font-weight: 600; border-radius: 5px;">LOGIN</a>
+            <a href="{{url_for('cad')}}" style="text-decoration: none; background: aqua; padding-top: 1rem; color: black; font-weight: 600; border-radius: 5px;">CRIAR CONTA</a>
+        </div>
+    </div>
+    
+</body>
+</html>

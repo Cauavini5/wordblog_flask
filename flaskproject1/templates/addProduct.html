@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../static/bars.js" defer></script>
+    <script src="../static/search.js" defer></script>
+    <script src="../static/popup.js" defer></script>
+    <link rel="stylesheet" href="../static/home.css">
+   
+</head>
+<body>
+
+
+    <header>
+        <div class="text">
+            <p>World</p><p>Blog</p>
+        </div>
+
+        <div class="items1">
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('login')}}">Sign-in</a>
+            <a href="{{url_for('cad')}}">Sign-up</a>
+        </div>
+
+        <div class="items2">
+            <input placeholder="Search" type="text" name="search" id="search"><img src="../static/search.svg" alt="" srcset=""></input>
+        </div>
+        <img id="header_logo" style="width: 1.2rem; height: 1.2rem;" src="../static/user.png" alt="" srcset="">
+    </header>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div style="color: white;padding: 0.8em;width:30%; height: 3em; width: 100%;" class=flashes>
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        
+        {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+
+    <div id="menu" >
+        <div id="items" >
+            <div class="userProfile" style="display: flex; margin-bottom: 1rem; align-items: center;">
+                <img src="../static/user.png" alt="" style="padding: 1em; border-radius: 100%; border: 1px solid white">
+                 <div class="info" style="margin-left: 2rem;">
+                    <p style="font-weight: 800;">{{infouser[0]}}</p>
+                    <p style="color: #535566">{{infouser[1]}}</p>
+                   
+                 </div>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.9rem; height: 0.9rem; " src="../static/user-solid.svg" alt=""><a style="color: white;;" href="">Profile</a>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.8rem; " src="../static/pen-solid.svg" alt=""><a style="color: white;" href="">Write</a>
+            </div>
+
+            <div class="itemMenu" style="display:flex">
+                <img style="width: 0.8rem; " src="../static/right-from-bracket-solid.svg" alt=""><a style="color: white;;" href="">Logout</a>
+            </div>
+            <div class="itemMenu" style="display:flex">
+                <a style="color: white;;" href="{{url_for('home')}}">Home</a>
+               </div>
+   
+               <div class="itemMenu" style="display:flex">
+                   <a href="">Contact</a>
+               </div>
+               <div class="itemMenu" style="display:flex">
+                   <a href="{{url_for('login')}}">Sign-in</a>
+               </div>
+               <div class="itemMenu" style="display:flex">
+                   <a href="{{url_for('cad')}}">Sign-up</a>
+               </div>
+            
+        </div>
+        
+    </header>
+
+
+       
+    </div>
+
+    <div class="root" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: 600; ">
+        <h3 style="color: white; font-weight: 300;">Adicionar post</h3>
+        <form class="form" enctype="multipart/form-data" method="post" action="{{url_for('saveprod')}}" style="display: grid; grid-template-rows: auto; grid-template-columns: 90%; grid-gap:0.5em;">
+            <label style="margin-top: 0.5em; color: white; font-weight: 300;" for="">Nome</label>
+            <input placeholder="name"  class="fields" style=" padding: 1em" name="name"  type="text">
+            <label  style="margin-top: 0.5em; color: white; font-weight: 300; background-color: #319DBF; text-align: center; padding: 1em; border-radius: 3px; font-size: small; font-weight: 800;" for="fileInput">IMAGE</label>
+            <input enctype="multipart/form-data" id="fileInput" style="display: none;" name="file" type="file" alt="">
+            <label style="margin-top: 0.5em; color: white; font-weight: 300; " for="">Categoria</label>
+            <input placeholder="categoria" class="fields" style="padding: 1rem;" type="text" name="categoria" id="">
+            <label style="margin-top: 0.5em; color: white; font-weight: 300;" for="">Texto</label>
+
+            <textarea class="fields" name="description" style=" padding: 1em;" placeholder="Seu texto" type="text" id="userInput"></textarea>
+            <button style="color: white; font-weight:600;margin-top: 0.5em; box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border-radius: 3px; padding: 1.5em; border:none; background-color: #319DBF;" type="submit">OK</button>
+        </form>
+
+</body>
+</html>

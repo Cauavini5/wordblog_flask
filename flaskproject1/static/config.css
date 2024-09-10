@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-color: #222222e0;
+    padding: 1.1em;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header > div {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > div > a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+a:visited {
+    color: rgb(27, 123, 233);
+
+}
+
+header > div > a:visited {
+    color: rgb(27, 123, 233);
+
+}
+
+@media screen and (max-width: 460px) {
+    .a_header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 460px) {
+    #header_logo {
+        transition: 1s;
+        display: none;
+    }
+}
+
+.root {
+    padding: 1em;
+    
+}
+
+.root > h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.none {
+    display:none;
+    height:0;
+    width:0;
+}
+
+.root > .itens {
+    font-family: 'Jockey One';
+    font-weight: 100;
+}

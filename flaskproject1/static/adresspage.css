@@ -1,0 +1,27 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    margin:0.5em;
+}
+
+.form {
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60%;
+    grid-template-rows:repeat(7, 1..2em);
+    
+}
+
+.form > input, .form > button {
+    border-radius: 3px;
+    outline: 0;
+    padding: 0.9em;
+    border: 1px solid gray;
+    box-shadow: 2px 4px 10px 0.2px #2e2e2eb0;
+    transition: 1s all;
+}
+.form > input::placeholder {
+    color: rgb(49, 49, 49);
+}
+

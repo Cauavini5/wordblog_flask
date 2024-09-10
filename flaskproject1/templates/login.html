@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+
+
+    <form action="{{url_for('validation')}}" method="post">
+        <div class="text">
+            <p>World</p><p>Blog</p>
+        </div>
+        <h4>Sign-in</h4>
+        <input type="text" placeholder="Name" name="user" id="user">
+        <input type="password" placeholder="Password" name="pass" id="pass">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div style="display: flex; align-items:center;box-shadow: 5px 5px 10px 1px #24242475;padding: 0.8em; border: 1px solid  rgb(204, 200, 200);  " class=flashes>
+            {% for message in messages %}
+            <p style="color: rgb(190, 0, 0);">{{ message }}</p>
+            
+            {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+        {% block body %}{% endblock %}
+        <button type="submit" id="submit">LOGIN</button>
+    </form>
+
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lato',sans-serif;
+    color: white;
+}
+
+
+
+#user {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+
+body {
+    margin-left: 1.5em;
+    background-color: #25283d;
+}
+
+.headerP {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.headerP > .info > a {
+    padding:0.5rem;
+    width: max-content;
+    border-radius: 2px;
+    background: #4B6BFB;
+}
+
+.headerP > *{
+    margin-top: 1rem;
+    grid-auto-rows: auto;
+    grid-gap: 0.5rem;
+    display: grid;
+    height: max-content;
+}
+
+.info {
+    height: max-content;
+}
+
+.headerP > h4 {
+    grid-area: perfil;
+}
+
+.headerP > img {
+    
+    width: 1.2em;
+
+}
+
+.boxmsg {
+    margin-top: 1rem;
+    width: 92%;
+    border-radius: 5px;
+    display:none; 
+    background-color: #141624; 
+    padding: 1em;
+}
+

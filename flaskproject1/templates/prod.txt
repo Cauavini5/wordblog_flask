@@ -1,0 +1,29 @@
+        <div class="products">
+            <div class="product" >
+                <img src="https://dillysports.vtexassets.com/arquivos/ids/190953-800-auto?v=638343571353000000&width=800&height=auto&aspect=true" alt="">
+                <h5 id="h55" class="h55">TÊNIS IMIGRANTE BCO FURTA COR ECOLAB OE</h5>
+                <p>R$ 399,90</p>
+                <button>BUY</button>
+            </div>
+    
+            <div class="product" >
+                <img src="https://dillysports.vtexassets.com/arquivos/ids/188363-800-auto?v=638331656554900000&width=800&height=auto&aspect=true" alt="">
+                <h5 class="h55">TÊNIS SÖUSA CHANTILLY IMPERIAL</h5>
+                <p>R$ 599,90</p>
+                <button>BUY</button>
+            </div>
+        </div>
+
+         print(hashes)
+         print(user_list)
+         if user in user_list and check_password_hash(hashes, pass_):
+            session['logged_in'] = True
+            session['user'] = user
+            print('LOGADO!!')
+            print(session)
+            msg = f'{user} você está logado!'
+            flash(msg)
+            return redirect(url_for('home'))    
+            break;   
+         else:
+            return render_template('login.html') 

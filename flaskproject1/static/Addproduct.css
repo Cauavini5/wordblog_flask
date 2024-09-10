@@ -1,0 +1,17 @@
+* {
+    font-family: 'Lato',sans-serif;
+}
+
+.form > input[type='text'], textarea {
+    background-color: #25283d;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 5px;
+    color: white;
+}
+
+.form > textarea {
+    height: 20vh;
+    resize: vertical;
+    margin-bottom: 2em;
+}
