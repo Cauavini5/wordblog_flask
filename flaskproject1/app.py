@@ -59,15 +59,6 @@ class User(BaseModel):
       database=db
       db_table='User'
 
-
-class TemporaryMSGs(BaseModel):
-   user=ForeignKeyField(User, backref='usermsg')
-   remetente=TextField()
-   msg=TextField()
-   class Meta:
-      database=db
-      db_table='TemporaryMSGs'
-
 class Products(BaseModel):
    name=TextField()
    description=TextField()
